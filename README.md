@@ -28,9 +28,8 @@ Useful API, Websocket, EventSource and basic of the most famous frameworks
 ## Typescript for backend
 Node basic introduction and event loop
 ## Nest js
-Github: https://github.com/nestjs/nest
-
-Course: https://courses.nestjs.com
+- Github: https://github.com/nestjs/nest
+- Course: https://courses.nestjs.com
 ## Mini project
 Mini project using nestjs that involves:
 - strict structure
