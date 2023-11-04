@@ -4,6 +4,21 @@ typescript roadmap from zero to dev
 What? How? Why ts and not js ?
 ## Setup environment
 vscode + extension + debug
+- ms-azuretools.vscode-docker
+- mhutchie.git-graph
+- GitLab.gitlab-workflow
+- eamodio.gitlens
+- oderwat.indent-rainbow
+- firsttris.vscode-jest-runner
+- jebbs.plantuml
+- qhoekman.language-plantuml
+- esbenp.prettier-vscode
+- alefragnani.project-manager
+- humao.rest-client
+- Gruntfuggly.todo-tree
+- xabikos.JavaScriptSnippets
+## Npm
+Basic usage
 ## Javascript data types
 - String, Number, Bigint, Boolean, Undefined, Null, Symbol
 - Objects: object, array, map, class, function ...
@@ -15,8 +30,8 @@ How memory references work? Intro to stack,heap and gc
 Equality, loop, array methods, spread, destructure, console
 ## Lambda function
 () => {} ... how it works?
-## Npm
-Basic usage. import/export concepts
+## Module
+import/export concepts
 ## Async code
 Timeout, interval, fetch, fs, promise
 ## Error handling
