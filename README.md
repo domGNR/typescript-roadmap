@@ -18,14 +18,14 @@ vscode + extension + debug
 - Gruntfuggly.todo-tree
 - xabikos.JavaScriptSnippets
 ## Npm
-Basic usage
+Basic usage: npm init, package.json, dependencies, devDependencies, node_modules
 ## Javascript data types
 - String, Number, Bigint, Boolean, Undefined, Null, Symbol
 - Objects: object, array, map, class, function ...
-## Typescript types
-How does they works? type, interface (extends + implements)
 ## References
 How memory references work? Intro to stack,heap and gc
+## Typescript types
+How does they works? type, interface (extends + implements)
 ## Sync code
 Equality, loop, array methods, spread, destructure, console
 ## Lambda function
