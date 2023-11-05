@@ -23,7 +23,7 @@ Basic usage
 - String, Number, Bigint, Boolean, Undefined, Null, Symbol
 - Objects: object, array, map, class, function ...
 ## Typescript types
-How does they works? type, interface
+How does they works? type, interface (extends + implements)
 ## References
 How memory references work? Intro to stack,heap and gc
 ## Sync code
