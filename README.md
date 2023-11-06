@@ -49,7 +49,7 @@ Equality, loop, array methods, spread, destructure, console, JSON.stringify/pars
 
 () => {} ... how it works?
 
-## Exercise
+## Exercises
 
 ex1, ex2, ex3
 
@@ -71,7 +71,7 @@ How it works a runtime ? node, deno, bun
 
 Node basic introduction and event loop
 
-## Exercise
+## Exercises
 
 ex4, ex5, ex6, ex7
 
@@ -79,7 +79,7 @@ ex4, ex5, ex6, ex7
 
 Introduction and approach
 
-## Exercise
+## Exercises
 
 ex8
 
@@ -87,7 +87,7 @@ ex8
 
 Useful API, Websocket, EventSource and basic of the most famous frameworks
 
-## Exercise
+## Exercises
 
 ex9
 
