@@ -1,0 +1,7 @@
+Fetching data
+Write a simple program that fetches data from the following public API 
+
+GET http://ielpo.net:3000/rate
+Accept: application/json
+
+Then call this function 3 times in one minutes (20s interval) and print via console.log the sum

@@ -1,0 +1,58 @@
+Il cliente xyz ha la necessità di loggare su standard output (console.log) 
+l'invocazione di alcuni suoi metodi in ambiente di produzione.
+
+Nello specifico vorrebbe loggare
+- alla invocazione del metodo: <unix timestamp> "start" <nome metodo> <parametri>
+- alla conclusione del metodo: <unix timestamp> "end" + <nome metodo> <parametri> ">" <risultato>
+
+Expected result:
+------------------------------
+1677827573257 start sum [5000,10000]
+1677827573260 end sum [5000,10000]>[15000]
+1677827573261 start sumDelay [1000,2000]
+1677827573261 start sumDelay [500,400]
+1677827574164 end sumDelay [500,400]>[900]
+1677827576262 end sumDelay [1000,2000]>[3000]
+------------------------------
+
+Requisito:
+Scrivere una soluzione flessibile che generi il minor impatto possibile.
+Il codice dentro i commenti non può essere cambiato
+
+Test class
+------------------------------
+class SumClass {
+	
+	sum(x: number, y: number): number {
+		/* this code can be different in production - start */
+
+		return x + y;
+
+		/* this code can be different in production - end */
+	}
+	
+	sumDelay(x: number, y: number): Promise<number> {
+		/* this code can be different in production - start */
+
+		const res = x + y;
+		return new Promise((resolve, reject) => {
+			setTimeout(() => {
+				resolve(res);
+			}, res);
+		});
+
+		/* this code can be different in production - end */
+	}
+}
+
+/* main ... */
+(async () => {
+	/* this code can be different in production - start */
+
+	const a = new SumClass();
+	a.sum(5000, 10000);
+	a.sumDelay(1000, 2000);
+	a.sumDelay(500, 400);
+
+	/* this code can be different in production - end */
+})();

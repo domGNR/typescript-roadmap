@@ -1,0 +1,17 @@
+Given a generic input object of type Record<string, number>
+let obj = { "LY": 43, "US": 19, "IN": 395, "IR": 32, "EG": 12, "SA": 17, };
+
+implement the sortObject(obj: Record<string, number>):{ name: string, value: number }[];
+
+Output:
+
+[
+ {"name":"EG","value":12},
+ {"name":"SA","value":17},
+ {"name":"US","value":19},
+ {"name":"IR","value":32},
+ {"name":"LY","value":43},
+ {"name":"IN","value":395}
+]
+
+Value are ordered by value, in asc order

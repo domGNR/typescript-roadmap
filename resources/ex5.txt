@@ -1,0 +1,32 @@
+/** Finish it... */
+
+const AVAILABLE_FRUITS = new Map([
+	["banana", "🍌"],
+	["peach", "🍑"],
+	["pineapple", "🍍"],
+	["orange", "🍊"],
+	["strawberry", "🍓"],
+]);
+
+function mix(arg0: string[]) {
+	throw new Error("Function not implemented.");
+}
+
+function selectFruit(fruit: string): Promise<string> {
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			const res = AVAILABLE_FRUITS.get(fruit);
+			res === undefined ? reject(`Fruit ${fruit} not available`) : resolve(res);
+		}, 500);
+	});
+}
+
+async function program() {
+	console.time("fruit-shake");
+	const res = await mix(["strawberry", "orange", "banana"]);
+	console.log(res); //[ '🍓', '🍊', '🍌' ]
+	console.timeEnd("fruit-shake");
+}
+
+program();
+

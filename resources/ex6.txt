@@ -1,0 +1,2 @@
+Read the file "package.json" from the filesystem and edit the author name to a random value.
+Finally save it to a new file called package.prg.json

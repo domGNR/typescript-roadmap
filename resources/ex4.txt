@@ -1,0 +1,6 @@
+Numbers in javascript are floating-point and sometimes you can have representation that does not match the common sense.
+Fortunately there is a package called "decimal.js" that fixes this problem
+
+Using decimal.js do the following math and print via console.log the results:
+- 0.01 + 0.05
+- 0.007 * 100

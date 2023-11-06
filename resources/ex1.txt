@@ -1,0 +1,5 @@
+Input: number[] //[1, 2, 3]
+
+TODO
+- function rightShift(arr: number[]) : number[];  //[3, 1, 2]
+- function leftShift(arr: number[]) : number[];  //[2, 3, 1]

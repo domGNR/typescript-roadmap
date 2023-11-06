@@ -1,0 +1,65 @@
+Lo scopo dell'esercizio è la creazione di un widget il quale mostri il "rate" di un prodotto.
+
+Il widget dovrà essere implementato con uno dei seguenti framework
+- vanilla
+- angular.io
+- svelte
+- vue
+- react
+
+Il cliente vorrebbe:
+- che il widget sia costruito in modo da poter essere inserito in più pagine dell'applicativo
+- che il il widget sia disabilitato di default ed attivabile/disattivabile tramite un pulsante
+
+Il server decide l'intervallo con cui aggiornare i dati
+Questa informazione è reperibile tramite i seguenti endpoint:
+
+GET
+http://ielpo.net:3000/rate
+Type: application/json
+
+SSE (Server sent event)
+http://ielpo.net:3000/sse
+Type: text/event-stream
+
+Websocket
+ws://ielpo.net:3001
+Type: Websocket (standard)
+{ event: "cmd", data: { type: "start" | "stop" }}
+
+Il payload di risposta sarà sempre il medesimo
+{ "rate" : number }
+
+Proposta grafica base, migliorabile a piacere
+
+<html>
+<head>
+    <title>Widget</title>
+    <style>
+        .container {
+            background-color: #2196f3;
+            padding: 10px;
+            width: 500px;
+        }
+
+        .item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            <label>Prezzo prodotto: -- €</label>
+        </div>
+        <div>
+            <button>START</button>        
+        </div>
+    </div>
+</body>
+</html>
