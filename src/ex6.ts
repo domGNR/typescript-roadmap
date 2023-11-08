@@ -10,9 +10,8 @@ async function readWriteFile(): Promise<void> {
         data.author = randomBytes(Math.ceil(6 / 2))
             .toString("hex")
             .slice(0, 6);
-        const buffer = Buffer.from(JSON.stringify(data));
         const newFileName = "package.prg.json";
-        await writeFile(path.join(rootPath, newFileName), buffer);
+        await writeFile(path.join(rootPath, newFileName), JSON.stringify(data));
         console.log(
             JSON.parse(
                 (await readFile(path.join(rootPath, newFileName))).toString()

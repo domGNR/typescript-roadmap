@@ -7,20 +7,14 @@ const AVAILABLE_FRUITS = new Map([
 ]);
 
 async function mix(arg0: string[]): Promise<string[]> {
-    const result: string[] = new Array();
-    for (const key in arg0) {
-        if (Object.prototype.hasOwnProperty.call(arg0, key)) {
-            await selectFruit(arg0[key])
-                .then((data) => {
-                    result.push(data);
-                })
-                .catch((err) => {
-                    // result.push(err);
-                    console.log(err);
-                });
-        }
+    const resultArray = new Array<string>();
+    const promiseArray = arg0.map((x) => selectFruit(x));
+    const resolvedPromises = await Promise.allSettled(promiseArray);
+    for (const result of resolvedPromises) {
+        if (result.status === "fulfilled") resultArray.push(result.value);
+        else console.log(result.reason);
     }
-    return result;
+    return resultArray;
 }
 
 function selectFruit(fruit: string): Promise<string> {

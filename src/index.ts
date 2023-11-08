@@ -6,35 +6,37 @@ import { ex5 } from "./ex5";
 import { ex6 } from "./ex6";
 import { ex7 } from "./ex7";
 
-console.log("Ex1");
-ex1();
+(async () => {
+    console.log("Ex1");
+    ex1();
 
-console.log();
+    console.log();
 
-console.log("Ex2");
-ex2();
+    console.log("Ex2");
+    ex2();
 
-console.log();
+    console.log();
 
-console.log("Ex3");
-ex3();
+    console.log("Ex3");
+    ex3();
 
-console.log();
+    console.log();
 
-console.log("Ex4");
-ex4();
+    console.log("Ex4");
+    ex4();
 
-console.log();
+    console.log();
 
-console.log("Ex5");
-ex5();
+    console.log("Ex5");
+    await ex5();
 
-console.log();
+    console.log();
 
-console.log("Ex6");
-ex6();
+    console.log("Ex6");
+    await ex6();
 
-console.log();
+    console.log();
 
-console.log("Ex7");
-ex7();
+    console.log("Ex7");
+    await ex7();
+})();
